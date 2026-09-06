@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ITCS333 A2 — Course Portal</title>
+  <!-- TODO: link your stylesheet here, e.g. <link rel="stylesheet" href="css/style.css"> -->
+  <!--
+    DESIGN SPEC for css/style.css (grader checks these):
+      - #site-header: padding at least 16px, a visible border-bottom
+      - .card: padding at least 12px, a visible border, margin or grid gap
+      - .card-grid: display grid or flex; gap at least 16px; 3 columns on desktop
+      - form inputs: padding at least 6px; a :focus style (e.g. outline or border-color change)
+      - @media (max-width: 700px): .card-grid becomes a single column
+  -->
+</head>
+<body>
+  <header id="site-header">
+    <h1>ITCS333 Course Portal</h1>
+    <nav class="main-nav">
+      <a href="#schedule">Schedule</a>
+      <a href="#grades">Grades</a>
+      <a href="#register">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="schedule" class="content-section">
+      <h2>Weekly Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Day</th><th>Time</th><th>Topic</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sunday</td><td>09:00</td><td>HTML &amp; CSS</td></tr>
+          <tr><td>Tuesday</td><td>09:00</td><td>JavaScript</td></tr>
+          <tr><td>Thursday</td><td>09:00</td><td>PHP &amp; PDO</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="grades" class="content-section">
+      <h2>Grading Breakdown</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Midterm</h3>
+          <p class="weight">25%</p>
+        </article>
+        <article class="card">
+          <h3>Project</h3>
+          <p class="weight">20%</p>
+        </article>
+        <article class="card">
+          <h3>Assignments</h3>
+          <p class="weight">15%</p>
+        </article>
+        <article class="card">
+          <h3>Final Exam</h3>
+          <p class="weight">40%</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="register" class="content-section">
+      <h2>Register for Office Hours</h2>
+      <form class="register-form" action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit" class="btn-primary">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>ITCS333 &mdash; University of Bahrain</p>
+  </footer>
+</body>
+</html>

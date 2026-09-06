@@ -1,0 +1,14 @@
+{
+  "name": "itcs333-a2-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Autograder for ITCS333 A2 (CSS Layout). Do not modify.",
+  "type": "module",
+  "scripts": {
+    "test": "node checks/run.mjs"
+  },
+  "dependencies": {
+    "css-tree": "^3.1.0",
+    "linkedom": "^0.18.12"
+  }
+}
