@@ -34,7 +34,7 @@ CILO 1, 2 — CSS selectors, cascade/specificity, box model, modern layout, resp
 Note: Last 30% will be awarded for participation in the class discussion of your work.
 
 ## How to work
-Fork → enable Actions → clone → edit `css/style.css` → push → submit fork URL in Blackboard (Sunday 23:59, Week 5).
+Fork → enable Actions → clone → edit `css/style.css` → push → submit fork URL in Blackboard.
 
 ## Run the tests locally
 ```bash
