@@ -57,8 +57,8 @@ function anyDecl(rules, prop, test) {
   return rules.some((r) => { const d = decls(r.block); return d[prop] !== undefined && test(d[prop], d); });
 }
 
-// ---------- Check 1 (10 pts): linked external stylesheet, no inline styles ----------
-check('external_stylesheet', 10, () => {
+// ---------- Check 1 (5 pts): linked external stylesheet, no inline styles ----------
+check('external_stylesheet', 5, () => {
   const links = [...document.querySelectorAll('link[rel="stylesheet"]')].map((l) => l.getAttribute('href') || '');
   if (!links.some((h) => /css\/style\.css$/.test(h))) return 'FAIL: link css/style.css in index.html <head>';
   const inline = [...document.querySelectorAll('[style]')];
@@ -66,8 +66,8 @@ check('external_stylesheet', 10, () => {
   return true;
 });
 
-// ---------- Check 2 (15 pts): >=3 selector kinds ----------
-check('selector_kinds', 15, () => {
+// ---------- Check 2 (10 pts): >=3 selector kinds ----------
+check('selector_kinds', 10, () => {
   if (!ast) return 'FAIL: css/style.css missing or unparseable';
   const sels = rulesMatching(() => true).map((r) => r.sel);
   const hasClass = sels.some((s) => /\.[A-Za-z]/.test(s));
@@ -79,8 +79,8 @@ check('selector_kinds', 15, () => {
   return true;
 });
 
-// ---------- Check 3 (15 pts): box model per spec ----------
-check('box_model', 15, () => {
+// ---------- Check 3 (10 pts): box model per spec ----------
+check('box_model', 10, () => {
   if (!ast) return 'FAIL: css/style.css missing or unparseable';
   const header = rulesMatching((s) => /#site-header/.test(s));
   const card = rulesMatching((s) => /\.card\b/.test(s) && !/card-grid/.test(s));
@@ -95,8 +95,8 @@ check('box_model', 15, () => {
   return true;
 });
 
-// ---------- Check 4 (20 pts): card grid layout ----------
-check('card_grid_layout', 20, () => {
+// ---------- Check 4 (15 pts): card grid layout ----------
+check('card_grid_layout', 15, () => {
   if (!ast) return 'FAIL: css/style.css missing or unparseable';
   const grid = rulesMatching((s) => /\.card-grid/.test(s));
   if (grid.length === 0) return 'FAIL: no rule targeting .card-grid';
@@ -123,8 +123,8 @@ check('form_focus', 10, () => {
   return true;
 });
 
-// ---------- Check 6 (20 pts): media query collapses grid ----------
-check('media_query', 20, () => {
+// ---------- Check 6 (15 pts): media query collapses grid ----------
+check('media_query', 15, () => {
   if (!ast) return 'FAIL: css/style.css missing or unparseable';
   let found = false;
   csstree.walk(ast, (node) => {
@@ -147,8 +147,8 @@ check('media_query', 20, () => {
   return true;
 });
 
-// ---------- Check 7 (10 pts): no !important, parses clean ----------
-check('css_hygiene', 10, () => {
+// ---------- Check 7 (5 pts): no !important, parses clean ----------
+check('css_hygiene', 5, () => {
   if (!ast) return 'FAIL: css/style.css missing or unparseable';
   if (/!important/.test(css)) return 'FAIL: remove !important';
   let errors = 0;

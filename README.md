@@ -22,13 +22,16 @@ CILO 1, 2 — CSS selectors, cascade/specificity, box model, modern layout, resp
 ## Rubric (100 points = 2.5%)
 | # | Check | Points |
 |---|---|---|
-| 1 | External stylesheet linked; no inline `style=` attributes | 10 |
-| 2 | ≥3 selector kinds used (class, id, descendant/pseudo-class) | 15 |
-| 3 | Box model: margin/padding/border per spec | 15 |
-| 4 | Card grid uses flex/grid with correct gap/track values | 20 |
+| 1 | External stylesheet linked; no inline `style=` attributes | 5 |
+| 2 | ≥3 selector kinds used (class, id, descendant/pseudo-class) | 10 |
+| 3 | Box model: margin/padding/border per spec | 10 |
+| 4 | Card grid uses flex/grid with correct gap/track values | 15 |
 | 5 | Form controls styled; `:focus` state exists | 10 |
-| 6 | `@media` query collapses grid under 700px | 20 |
-| 7 | No `!important`; CSS parses without errors | 10 |
+| 6 | `@media` query collapses grid under 700px | 15 |
+| 7 | No `!important`; CSS parses without errors | 5 |
+| 8 | Discussion in class | 30 |
+
+Note: Last 30% will be awarded for participation in the class discussion of your work.
 
 ## How to work
 Fork → enable Actions → clone → edit `css/style.css` → push → submit fork URL in Blackboard (Sunday 23:59, Week 5).
